@@ -23,3 +23,6 @@ calculadorateste/
 │   └── script.js
 
 ├── server.js
+
+
+7 - abra o terminal e digite node server.js
