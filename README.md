@@ -11,9 +11,15 @@ Como rodar:
 5 - digite npm install express
 
 6 - criar os arquivos da mesma forma que estão organizados aqui
+
 calculadorateste/
+
 ├── public/
+
 │   ├── index.html
+
 │   ├── styles.css
+
 │   └── script.js
+
 ├── server.js
