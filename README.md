@@ -10,7 +10,7 @@ Como rodar:
 
 5 - digite npm install express
 
-6 - criar os arquivos da mesma forma que estão organizados aqui
+6 - crie e organize os arquivos da mesma forma que estão organizados aqui
 
 calculadorateste/
 
