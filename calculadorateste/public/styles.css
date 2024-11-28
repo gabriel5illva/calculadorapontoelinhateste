@@ -104,13 +104,3 @@ button:hover {
     font-size: 16px;
     margin: 5px 0;
 }
-
-footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #f9f4ee;
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
-    margin-top: auto;
-    font-size: 14px;
-    color: #596b39;
-}
