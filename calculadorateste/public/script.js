@@ -24,5 +24,29 @@ document.getElementById("form-calculadora").addEventListener("submit", async fun
         <h2>${nomeProjeto}</h2>
         <p><strong>Descrição:</strong> ${descricaoProjeto}</p>
         <p><strong>Tempo total:</strong> ${data.minutos} minutos e ${data.segundos} segundos</p>
+        <div class="resultado-botoes">
+            <button id="reiniciar">Reiniciar</button>
+            <button id="salvar">Salvar Resultado</button>
+        </div>
     `;
+
+    document.getElementById("reiniciar").addEventListener("click", function () {
+        document.getElementById("form-calculadora").reset();
+        document.getElementById("resultado").innerHTML = ""; // Limpa o resultado
+    });
+
+    document.getElementById("salvar").addEventListener("click", function () {
+        const resultadoProjeto = {
+            nomeProjeto,
+            descricaoProjeto,
+            minutos: data.minutos,
+            segundos: data.segundos,
+        };
+
+        const resultadosSalvos = JSON.parse(localStorage.getItem("resultados")) || [];
+        resultadosSalvos.push(resultadoProjeto);
+        localStorage.setItem("resultados", JSON.stringify(resultadosSalvos));
+
+        alert("Resultado salvo com sucesso! Verifique a página de perfil.");
+    });
 });
