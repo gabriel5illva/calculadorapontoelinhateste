@@ -1,15 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora de Tempo</title>
+    <title>PONTO E LINHA</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <header class="main-header">
+        <!--<h1 class="Titulo">Ponto e Linha</h1>-->
+        <div class="logo">
+            <img src="2.png" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="cadastro.html">Cadastro</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="#perfil">Perfil</a></li>
+            </ul>
+        </nav>
+    </header>
+
     <div class="container">
         <h1>Calculadora de Tempo para Projetos</h1>
         <form id="form-calculadora">
+            <label>Nome do Projeto: <input type="text" id="nomeProjeto" required></label>
+            <label>Descrição do Projeto: <textarea id="descricaoProjeto" rows="3" required></textarea></label>
             <label>Correntinhas: <input type="number" id="correntinhas" required></label>
             <label>Pontos Baixíssimos: <input type="number" id="baixissimo" required></label>
             <label>Pontos Baixos: <input type="number" id="baixo" required></label>
@@ -21,6 +37,11 @@
         </form>
         <div id="resultado"></div>
     </div>
+
+    <footer>
+        <p>© 2024 Ponto e Linha. Todos os direitos reservados.</p>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
