@@ -21,7 +21,7 @@ document.getElementById("form-calculadora").addEventListener("submit", async fun
     const data = await response.json();
 
     document.getElementById("resultado").innerHTML = `
-        <h2>Resultado para o Projeto: ${nomeProjeto}</h2>
+        <h2>${nomeProjeto}</h2>
         <p><strong>Descrição:</strong> ${descricaoProjeto}</p>
         <p><strong>Tempo total:</strong> ${data.minutos} minutos e ${data.segundos} segundos</p>
     `;
