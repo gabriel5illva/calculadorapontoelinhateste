@@ -1,6 +1,9 @@
 document.getElementById("form-calculadora").addEventListener("submit", async function (e) {
     e.preventDefault();
 
+    const nomeProjeto = document.getElementById("nomeProjeto").value;
+    const descricaoProjeto = document.getElementById("descricaoProjeto").value;
+
     const correntinhas = parseInt(document.getElementById("correntinhas").value);
     const baixissimo = parseInt(document.getElementById("baixissimo").value);
     const baixo = parseInt(document.getElementById("baixo").value);
@@ -17,6 +20,9 @@ document.getElementById("form-calculadora").addEventListener("submit", async fun
 
     const data = await response.json();
 
-    document.getElementById("resultado").textContent = 
-        `Tempo total: ${data.minutos} minutos e ${data.segundos} segundos`;
+    document.getElementById("resultado").innerHTML = `
+        <h2>Resultado para o Projeto: ${nomeProjeto}</h2>
+        <p><strong>Descrição:</strong> ${descricaoProjeto}</p>
+        <p><strong>Tempo total:</strong> ${data.minutos} minutos e ${data.segundos} segundos</p>
+    `;
 });
