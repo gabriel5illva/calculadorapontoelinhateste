@@ -5,6 +5,7 @@ const cors = require("cors");
 const app = express();
 app.use(cors());
 app.use(express.json());
+
 app.use(express.static(path.join(__dirname, "public")));
 
 app.post("/calculadorateste", (req, res) => {
@@ -35,8 +36,8 @@ app.post("/calculadorateste", (req, res) => {
     res.json({ minutos, segundos });
 });
 
-app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "public", "index.html"));
+app.get("/login", (req, res) => {
+    res.sendFile(path.join(__dirname, "public", "login.html"));
 });
 
 const PORT = 3000;
